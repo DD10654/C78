@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Family</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 id="title">My Family</h1>
+<img id="img" src="my-family.jpg">
+<h4 id="label">My Family</h4>
+<button type="button" onclick=nextslide()>Next</button>
+</body>
+<style>
+body {
+text-align: center;
+}
+#title {
+font-family: 'Yusei Magic', sans-serif;
+font-size: 100px;
+}
+</style>
+<script>
+var images = [
+"Aarav A.jpg",
+"Hema.jpg",
+"Vivek.jpg",
+"my-family.jpg"
+
+];
+var names = [
+"My Family",
+"Aarav",
+"Vivek",
+"Hema",
+];
+var i = 0;
+function nextslide() {
+if (i == 4)
+{
+i=0;
+}
+document.getElementById("img").innerHTML = images[i];
+document.getElementById("label").innerHTML = names[i];
+i++;
+}
+</script>
+</html>
